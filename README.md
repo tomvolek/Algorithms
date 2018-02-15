@@ -5,7 +5,7 @@ This repository is inspired by [keon's](https://github.com/keon/algorithms) solv
 I wanted to compare solutions across different languages and learn in the process.
 Solutions may be my own, or shamelessly stolen from the interwebs.
 
-![go](images/go.png) ![js](images/javascript.png) ![py](images/python.png) ![ruby](images/ruby.png) ![java](images/java.png) ![C++](images/C++.png)
+ ![py](images/python.png)  ![java](images/java.png) ![C++](images/C++.png) ![go](images/go.png) ![js](images/javascript.png) ![ruby](images/ruby.png)
 
 ### Contributing
 feel free to submit suggestions about implementations in different languages.
