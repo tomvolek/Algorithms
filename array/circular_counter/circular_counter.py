@@ -1,8 +1,11 @@
 """
+
 Given a circular list of items, print each third member and
-then remove them. The next counter starts immedietly after
+then remove them from the list. The next counter starts imedietly after
 the member is removed. print till all the members are exusted.
-Array= ['1','2','3','4','5','6','7','8','9']
+ex: Array= ['1','2','3','4','5','6','7','8','9']
+print => 3 6 9 4 8 5 2 7 1
+
 """
 
 def circular_array_counter(array_list,skip):
