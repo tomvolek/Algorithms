@@ -83,6 +83,7 @@ feel free to submit suggestions about implementations in different languages.
     - [skyline](heap/skyline.py)
     - [sliding_window_max](heap/sliding_window_max.py)
 - [linkedlist](linkedlist)
+    - [double_linked_list](linkedlist/double_linked_list)
     - [add_two_numbers](linkedlist/add_two_numbers.py)
     - [copy_random_pointer](linkedlist/copy_random_pointer.py)
     - [delete_node](linkedlist/delete_node.py)
