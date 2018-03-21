@@ -5,7 +5,7 @@
 * ex: Array= ['1','2','3','4','5','6','7','8','9']
 * print => 3 6 9 4 8 5 2 7 1
 * File:   CircularCounter.cpp
-* Author: tajayebi
+* Author: tomvolek 
 */
 
 #include <cstdlib>
