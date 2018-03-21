@@ -1,9 +1,9 @@
 /*
- * Double linked list in Java 
+ * Sorted Double linked list in Java 
  * Insertion:  O(1) 
- * Search: O(1)
+ * Search: O(n)
  * Deletion: O(1)
- * @author tajayebi
+ * @author tomvolekt
  */
 package douplelinkedlist;
     

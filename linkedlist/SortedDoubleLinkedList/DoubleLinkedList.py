@@ -1,10 +1,10 @@
-"""  Create a link list and add items to the head or middle or end of the Linkedlist.
+"""  Create a sorted  link list and add items to the head or middle or end of the Linkedlist.
 
  * Double linked list in Java
  * Insertion:  O(1)
- * Search: O(1)
+ * Search: O(n)
  * Deletion: O(1)
- * @author tajayebi
+ * @author tomvolek 
  """
 
 class Node(object):
