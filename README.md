@@ -145,7 +145,7 @@ feel free to submit suggestions about implementations in different languages.
 - [stack](stack)
     - [longest_abs_path](stack/longest_abs_path.py)
     - [simplify_path](stack/simplify_path.py)
-    - [stack](stack/stack.py)
+    - [stack](stack)
     - [valid_parenthesis](stack/valid_parenthesis.py)
 - [string](string)
     - [add_binary](string/add_binary.py)
