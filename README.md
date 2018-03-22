@@ -13,7 +13,7 @@ feel free to submit suggestions about implementations in different languages.
 ## List of my Implementations
 
 - [array](array)
-    - [circular_counter](array/circular_counter) !(images/green.jpeg)
+    - [circular_counter](array/circular_counter) (images/green.jpeg)
     - [flatten](array/flatten)
     - [garage](array/garage)
     - [longest_non_repeat](array/longest_non_repeat)
