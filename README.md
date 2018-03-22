@@ -1,9 +1,9 @@
 Data Structure and Algorithms Problems solved in many languages
 =========================================
 
-This repository is inspired by [keon's](https://github.com/keon/algorithms) solved problems in python. 
-I wanted to compare solutions across different languages and learn in the process.
-Solutions may be my own, or shamelessly stolen from the interwebs.
+This repository is inspired by others on the net who have done algorithms such as  [keon's](https://github.com/keon/algorithms) . 
+However solutions are mostly my own and I have tried to do them in the most popular languages which could be useful to others. 
+
 
  ![py](images/python.png)  ![java](images/java.png) ![C++](images/C++.png) ![go](images/go.png) ![js](images/javascript.png) ![ruby](images/ruby.png)
 
@@ -13,7 +13,7 @@ feel free to submit suggestions about implementations in different languages.
 ## List of my Implementations
 
 - [array](array)
-    - [circular_counter](array/circular_counter)
+    - [circular_counter](array/circular_counter)(images/green.png)
     - [flatten](array/flatten)
     - [garage](array/garage)
     - [longest_non_repeat](array/longest_non_repeat)
