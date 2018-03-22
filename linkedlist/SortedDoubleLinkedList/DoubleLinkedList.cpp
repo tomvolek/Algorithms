@@ -10,7 +10,6 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <cstdlib>
 
 using namespace std;
 
@@ -31,23 +30,23 @@ class DoubleLinkedList {
     }
     
      void insert(int newdata){
-     Node *newNode = new Node;
-     newNode->data  = newdata ;
-     newNode->next_ptr = NULL;
-     newNode->previous_ptr = NULL; 
+          Node *newNode = new Node;
+       	  newNode->data  = newdata ;
+          newNode->next_ptr = NULL;
+          newNode->previous_ptr = NULL; 
      
-    if (head == NULL){
-        head = newNode; 
-        tail = newNode; 
-        newNode = NULL; //free up the created newNode space 
-        return;
-        } 
-    else {
+         if (head == NULL){
+            head = newNode; 
+            tail = newNode; 
+            newNode = NULL; //free up the created newNode space 
+            return;
+          } 
+        else {
         
-        Node *currentNode = new Node;
-        currentNode = head;
-        while (currentNode != NULL  ){
-            if (newNode->data <= currentNode->data){
+            Node *currentNode = new Node;
+            currentNode = head;
+            while (currentNode != NULL  ){
+               if (newNode->data <= currentNode->data){
                        // if (newNode->data < head->data){
                        if (currentNode->previous_ptr == NULL){
                            newNode->next_ptr = head;
