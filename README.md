@@ -123,7 +123,7 @@ feel free to submit suggestions about implementations in different languages.
 - [queue](queue)
     - [max_sliding_window](queue/max_sliding_window.py)
     - [moving_average](queue/moving_average.py)
-    - ![](images/green.png) [queue](queue/queue.py)
+    - ![](images/green.png) [queue](queue/queue)
     - [reconstruct_queue](queue/reconstruct_queue.py)
     - [zigzagiterator](queue/zigzagiterator.py)
 - [search](search)
