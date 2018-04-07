@@ -97,7 +97,7 @@ feel free to submit suggestions about implementations in different languages.
     - [rotate_list](linkedlist/rotate_list.py)
     - [swap_in_pairs](linkedlist/swap_in_pairs.py)
 - [map](map)
-    - [hashtable](map/hashtable.py)
+    - ![](images/green.png) [hashtable](hash/simple_hash)
     - [longest_common_subsequence](map/longest_common_subsequence.py)
     - [randomized_set](map/randomized_set.py)
     - [valid_sudoku](map/valid_sudoku.py)
