@@ -24,8 +24,8 @@ feel free to submit suggestions about implementations in different languages.
     - [summary_ranges](array/summary_ranges.py)
     - [three_sum](array/three_sum.py)
     - [two_sum](array/two_sum.py)
-- [backtrack](backtrack)
-    - [anagram](backtrack/anagram.py)
+- [Recursion](Recursion)
+    - ![](images/green.png)  [anagram](recursion/anagram.java)
     - [array_sum_combinations](backtrack/array_sum_combination.py)
 
 ## TODO
