@@ -76,7 +76,7 @@ feel free to submit suggestions about implementations in different languages.
 - [graph](graph)
     - [clone_graph](graph/clone_graph.py)
     - [find_path](graph/find_path.py)
-    - ![](images/green.png) [graph](graph)
+    - ![](images/green.png) [graph](graph/)
     - [traversal](graph/traversal.py)
 - [heap](heap)
     - [merge_sorted_k_lists](heap/merge_sorted_k_lists.py)
