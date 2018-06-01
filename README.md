@@ -20,7 +20,7 @@ feel free to submit suggestions about implementations in different languages.
     - [merge_intervals](array/merge_intervals.py)
     - [missing_ranges](array/missing_ranges.py)
     - [plus_one](array/plus_one.py)
-    - [rotate_array](array/rotate_array.py)
+    - ![](images/green.png) [rotate_array](array/rotate_array/RotateArray.java)
     - [summary_ranges](array/summary_ranges.py)
     - [three_sum](array/three_sum.py)
     - [two_sum](array/two_sum.py)
