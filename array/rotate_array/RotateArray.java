@@ -1,6 +1,6 @@
 /*
  *  Rotate an array to the right for K number of spots 
- * Space O(1), Time O(n) 
+ *  Space O(1), Time O(n) 
  */
 
 package rotatearray;
