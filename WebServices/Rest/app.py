@@ -1,4 +1,5 @@
 """
+Example of Rest API 
 To begin with, we will need to install the required library and dependencies, we will be using Flask-RESTful, an extension for Flask which enables rapid development of REST API with minimal setup. 
 Note that Flask-RESTful requires Python version 2.6, 2.7, 3.3, 3.4, 3.5 or 3.6.
 
