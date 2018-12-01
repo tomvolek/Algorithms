@@ -3,7 +3,6 @@ package com.datastructures.binarytree;
 /*
 BinaryTree :
 * Search : O (logn)
-
 */
 
 class Node {
@@ -55,19 +54,27 @@ public class BinaryTree {
 
     private void print_tree_inorder(Node local_root){
         Node current = local_root;
+        if (current == null)
+            return;
+
         if (current.left != null) {
             print_tree_inorder(current.left);
         }
+
         System.out.println(local_root.data);
+
         if (current.right != null){
             print_tree_inorder(current.right);
         }
     }
     private void print_tree_preorder(Node local_root){
         Node current = local_root;
+
         if (current == null)
             return;
+
         System.out.println(local_root.data);
+        
         if(current.left != null){
             print_tree_preorder(current.left);
         }
@@ -78,17 +85,17 @@ public class BinaryTree {
 
     private void print_tree_postorder(Node local_root){
         Node current = local_root;
-        if (current.right != null){
-            print_tree_postorder(current.right);
-        }
-        System.out.println(local_root.data);
+
         if (current.left != null) {
             print_tree_postorder(current.left);
         }
 
+        if (current.right != null){
+            print_tree_postorder(current.right);
+        }
+        System.out.println(local_root.data);
+
     }
-
-
 
 
     public static void main(String[] args) {
@@ -98,15 +105,15 @@ public class BinaryTree {
         tree.insert(4);
         tree.insert(2);
         tree.insert(7);
+
         System.out.println("Inorder output:");
         tree.print_tree_inorder(tree.root);
+
         System.out.println("Preorder output: ");
         tree.print_tree_preorder(tree.root);
+
         System.out.println("Post order output:");
         tree.print_tree_postorder(tree.root);
-
-
-
     }
 
-    }
+}

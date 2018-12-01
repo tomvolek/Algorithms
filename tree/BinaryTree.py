@@ -1,9 +1,7 @@
-"""
-Program: Binarry Tree with Post Order Traversal
-Search:  O (log(n) 
- """
+""" Program: Binarry Tree with Post Order TraversalSearch:  O (log(n)  """
 
 class Node: 
+
     def __init__(self,value):
         self.left = None 
         self.right = None 
@@ -30,7 +28,7 @@ class Node:
 
 
     def Print_Tree_Inorder(self): 
-        """ Print tree content inorder """
+        """ Print tree content inorder: Go left subtree first then right subtree """
         if self.left:
             self.left.Print_Tree_Inorder()
         print (self.data)
@@ -38,7 +36,7 @@ class Node:
             self.right.Print_Tree_Inorder()
 
     def Print_Tree_Postorder(self): 
-        """  Print the tree in Postorder """        
+        """  Print the tree in Postorder: go left subtree first and then right, if both no child print"""        
         if self.left: 
             self.left.Print_Tree_Postorder()
         if self.right: 
@@ -131,25 +129,25 @@ class Node:
         return cnt   
 
 
-root = Node(8)
-root.insert(3)
-root.insert(10)
-root.insert(1)
-#root.Print_Tree_Inorder()
-root.insert(4)
-root.insert(7)
-root.insert(14)
-root.insert(13)
-root.insert(7)
+mytree = Node(8)
+mytree.insert(3)
+mytree.insert(10)
+mytree.insert(1)
+#mytree.Print_Tree_Inorder()
+mytree.insert(4)
+mytree.insert(7)
+mytree.insert(14)
+mytree.insert(13)
+mytree.insert(7)
 
 print("Inorder print of the tree : " )
-root.Print_Tree_Inorder()
+mytree.Print_Tree_Inorder()
 
 print("Postorder print of the tree : " )
-root.Print_Tree_Postorder()
+mytree.Print_Tree_Postorder()
 
 print("Preorder  print of the tree : " )
-root.Print_Tree_Preorder()
+mytree.Print_Tree_Preorder()
 
-node, parent = root.search_tree(13)
+node, parent = mytree.search_tree(13)
 print("Node data :",node.data)
