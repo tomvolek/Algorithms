@@ -23,6 +23,7 @@ let methods = {
         }
     },
 
+
     fetchUser: {
         description: `fetches the user of the given id`,
         params: ['id:the id of the user were looking for'],

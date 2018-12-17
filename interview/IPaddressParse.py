@@ -3,10 +3,12 @@
 import sys
 import os.path
 import re
+import urllib.request
 from collections import Counter
 from itertools import permutations
+import faulthandler
 
-import urllib.request
+faulthandler.enable()
 
 #import files base on python version 
 if ((3, 0) <= sys.version_info <= (3, 9)):
@@ -26,13 +28,11 @@ with urllib.request.urlopen( url ) as response:
     response_text = response.read()        
     print( response_text )  
 
-
 #Note:  compile() is used to declare a pattern for matching, it can be used in subsequent calls to re.search()
 patternIP4 = re.compile(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
 patternIP6 = re.compile(r"(([0-9a-f]{1,4}:){7}[0-9a-f]{1,4}) | \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
 patternHTTP = re.compile(r"http://\w+\.com" )
 try: 
-     
     with open('/Users/tom/Development/Algorithms/interview/access.log') as fd: 
         log = fd.read()  # read entire file into log structure
         
@@ -120,34 +120,30 @@ shape =  ['circle','square','rect']
         
 print (list(enumerate(shape)))
 
-with open ("/tmp/foo.text") as fp: 
+with open ("/Users/tom/Development/Algorithms/interview/access.log") as fp: 
     for line in iter(fp.readline,''):
         print(line)
 
-    
 numbers_divisible_by_three = [3, 6, 9, 12, 15]
 
 for num in numbers_divisible_by_three:
     quotient = num / 3
     print(f"{num} divided by 3 is {int(quotient)}.")
 
-table = {'sanjose': 10,'Los Angles': 20 , 'Seatle':30}
-for city, number in table.items(): 
-    print (f'{city:10} => {number:4d}')
 
-
+# for loop over ditionary items   with format print statement 
 table = {'Color': 23,'hight': 45 } 
 for color,hight in table.items(): 
     print (f'{color:10} => {hight:4d}')       
 
 
-with open ('/tmp/myfile.cvs',"r") as fd: 
+with open ('/Users/tom/Development/Algorithms/interview/access.log',"r") as fd: 
     for line in iter(fd.readline,''): 
-        print (line)
+        print ("line is ",line)
 
 
 
-
+#  create custom iterator class myNumbers 
 class MyNumbers: 
     def __iter__(self):
         self.a = 1
@@ -160,13 +156,13 @@ class MyNumbers:
             return x
         else:
             raise StopIteration
+
 myclass = MyNumbers()
 myiter = iter(myclass)
 
 for x in myiter:
   print(x)
 
-    
 
-
-
+a = '1110101011011011'
+print (max(map(len,a.split('0'))))
