@@ -1,12 +1,18 @@
 """ Scan a file like access.log file and parse for repeated IPv and Ip6
 """
 import sys
-import os.path
 import re
+import os.path
+import faulthandler
 import urllib.request
+import tensorflow as tf 
+
+
 from collections import Counter
 from itertools import permutations
-import faulthandler
+import keras 
+
+
 
 faulthandler.enable()
 
@@ -141,8 +147,6 @@ with open ('/Users/tom/Development/Algorithms/interview/access.log',"r") as fd:
     for line in iter(fd.readline,''): 
         print ("line is ",line)
 
-
-
 #  create custom iterator class myNumbers 
 class MyNumbers: 
     def __iter__(self):
@@ -163,6 +167,92 @@ myiter = iter(myclass)
 for x in myiter:
   print(x)
 
-
 a = '1110101011011011'
 print (max(map(len,a.split('0'))))
+
+
+#  Tensorflow samples 
+# https://www.youtube.com/watch?v=yX8KuPZCAMo
+# after running app , go to :/Users/tom/graph and execute: tensorboard --logdir "graphfile" 
+
+
+
+#Model parameters 
+W = tf.Variable([.3],tf.float32)
+b = tf.Variable([-.3],tf.float32)
+# Inputs and Outpurs 
+x =tf.placeholder(tf.float32)
+linear_model = W * x + b
+
+y = tf.placeholder(tf.float32)
+
+#loss 
+square_delta = tf.square(linear_model - y)
+loss = tf.reduce_sum(square_delta)
+
+optimizer = tf.train.GradientDescentOptimizer(0.01)
+train = optimizer.minimize(loss)
+
+init = tf.global_variables_initializer() 
+
+sess = tf.Session()
+sess.run(init)
+
+for i in range(1000):
+    sess.run(train,{x:[1,2,3,4],y:[0,-1,-2,-3]})
+
+print (sess.run([W,b]))
+
+#print(sess.run(loss,{x:[1,2,3,4],y:[0,-1,-2,-3]}))
+
+
+#---------------------
+# https://www.geeksforgeeks.org/face-detection-using-python-and-opencv-with-webcam/
+# Use SciPy for image manipilation 
+# 
+from scipy.misc import imread, imsave, imresize 
+# Read a JPEG image into a numpy array 
+img = imread('/Users/tom/Desktop/Hossein_Daughter.jpg') # path of the image 
+print(img.dtype, img.shape) 
+  
+# Tinting the image 
+img_tint = img * [1, 0.45, 0.3] 
+  
+# Saving the tinted image 
+imsave('/Users/tom/Desktop/Hossein_Daughter_tinted.jpg', img_tint) 
+  
+# Resizing the tinted image to be 300 x 300 pixels 
+img_tint_resize = imresize(img_tint, (300, 300)) 
+  
+# Saving the resized tinted image 
+imsave('/Users/tom/Desktop/Hossein_Daughter_resized.jpg', img_tint_resize) 
+
+
+#
+# Scipy function and plot demo 
+#
+from scipy import special
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+
+def drumhead_height(n, k, distance, angle, t):
+    kth_zero = special.jn_zeros(n, k)[-1]
+    return np.cos(t) * np.cos(n*angle) * special.jn(n, distance*kth_zero)
+theta = np.r_[0:2*np.pi:50j]
+radius = np.r_[0:1:50j]
+x = np.array([r * np.cos(theta) for r in radius])
+y = np.array([r * np.sin(theta) for r in radius])
+z = np.array([drumhead_height(1, 1, r, theta, 0.5) for r in radius])
+
+
+fig = plt.figure()
+ax = Axes3D(fig)
+ax.plot_surface(x, y, z, rstride=1, cstride=1, cmap=cm.jet)
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+plt.show()
+
+
