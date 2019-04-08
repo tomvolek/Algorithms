@@ -7,14 +7,13 @@ import faulthandler
 import urllib.request
 import tensorflow as tf 
 
-
 from collections import Counter
 from itertools import permutations
+from random import shuffle 
 import keras 
 
-
-
 faulthandler.enable()
+faulthandler.dump_traceback(file=sys.stderr, all_threads=True)
 
 #import files base on python version 
 if ((3, 0) <= sys.version_info <= (3, 9)):
@@ -33,6 +32,9 @@ url = url + "?" + query_string
 with urllib.request.urlopen( url ) as response:
     response_text = response.read()        
     print( response_text )  
+
+# example of searching for a string in a file using regx
+#if re.search(br'(?i)blabla', s):
 
 #Note:  compile() is used to declare a pattern for matching, it can be used in subsequent calls to re.search()
 patternIP4 = re.compile(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
@@ -256,3 +258,7 @@ ax.set_zlabel('Z')
 plt.show()
 
 
+# shuffel a list 
+x = [ "one", "two","three","four"]
+shuffle (x)
+print ("X after shuffle",x)
