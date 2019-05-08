@@ -1,6 +1,5 @@
 // Count number of elements in a link list 
 
-
 class Node { 
 	int data; 
 	Node next; 
@@ -41,7 +40,5 @@ public class LinkListLength {
 		
 		
 	}
-	
-	
 	
 }
