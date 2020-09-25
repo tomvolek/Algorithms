@@ -1,4 +1,4 @@
-/*
+l..l8/*
 * Given a circular list of items, print each third member and
 * then remove them from the list. The next counter starts imedietly after
 * the member is removed. print till all the members are exusted.
