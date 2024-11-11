@@ -14,9 +14,9 @@ int main()
 int num1,num2,sum;
 string mystr;
 
-cout << "inout string" << endl;
+cout << "Input string" << endl;
 getline(cin,mystr);
-cout << " inoutted string is = " << mystr << endl;
+cout << " Inputed string is = " << mystr << endl;
 
 
 num1= 3; num2=2;
