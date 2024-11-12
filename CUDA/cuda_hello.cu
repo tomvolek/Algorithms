@@ -19,7 +19,7 @@ __global__ void cuda_hello() {
 
 int main() { 
     cuda_hello<<<1,1>>>();
-    retirn 0;
+    return 0;
 }
 
 
