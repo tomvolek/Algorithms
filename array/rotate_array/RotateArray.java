@@ -25,7 +25,7 @@ public class RotateArray {
         }
        
         System.out.println("Input how many positions to rotate:  ");
-        order = reader.nextInt(); 
+        order = reader.nextInt() % array_length;
         reader.close();
                 
                 int k = 0; 

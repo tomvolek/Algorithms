@@ -11,8 +11,8 @@ public class Circularly_Sorted_Array {
         while (low <= high){
             if (myArray[low] <= myArray[high]) return low;
             int mid = (low+high) /2;
-            int next = (mid +1 ) %2 ;
-            int prev = (mid -1 ) %2;
+            int next = (mid + 1) % n;
+            int prev = (mid - 1 + n) % n;
             if (myArray[mid] <= myArray[next] && myArray[mid] <= myArray[prev]) return mid ;
             else if (myArray[mid] <= myArray[high]) high = mid -1 ;
             else if (myArray[mid] >= myArray[low]) low = mid+1;

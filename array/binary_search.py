@@ -3,8 +3,8 @@ def binary_search(array,num):
     left = 0 
     right= len(array) -1
     #print (right)
-    while (array[left] <= array[right]):
-        mid = left + ((right -1)//2)
+    while left <= right:
+        mid = (left + right) // 2
         if array[mid] == num: 
             return mid
         elif num > array[mid]:   # num greater than mid look on right  
