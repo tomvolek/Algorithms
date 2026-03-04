@@ -19,12 +19,10 @@ def circular_array_counter(array_list,skip):
         print (array_list.pop(index))
         list_len -= 1
 
-# input a list of number ito a list
-print ('input a list of numbers: ')
-Array = [int(x) for x in input().split()]
-print ('Array inouted=>',  Array)
-
-
-circular_array_counter(Array,3)
+if __name__ == '__main__':
+    print ('input a list of numbers: ')
+    Array = [int(x) for x in input().split()]
+    print ('Array inouted=>',  Array)
+    circular_array_counter(Array,3)
 
 ########
